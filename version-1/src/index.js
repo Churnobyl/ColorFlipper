@@ -1,5 +1,7 @@
 function changeColor() {
+  /* R, G, B값을 각각 랜덤으로 구하기 */
   let nxtR, nxtG, nxtB;
+
   nxtR = Math.floor(Math.random() * 256);
   nxtG = Math.floor(Math.random() * 256);
   nxtB = Math.floor(Math.random() * 256);
@@ -11,6 +13,7 @@ function changeColor() {
   bgG = nxtG.toString(16).padStart(2, "0");
   bgB = nxtB.toString(16).padStart(2, "0");
 
+  /* 배경색 바꾸기 */
   const changedColor = "#" + bgR + bgG + bgB;
   document.body.style.backgroundColor = changedColor;
 
@@ -20,8 +23,8 @@ function changeColor() {
   titleR = (255 - nxtR).toString(16).padStart(2, "0");
   titleG = (255 - nxtG).toString(16).padStart(2, "0");
   titleB = (255 - nxtB).toString(16).padStart(2, "0");
+
   const titleColor = "#" + titleR + titleG + titleB;
-  console.log();
   document.getElementById("title").style.color = titleColor;
 }
 
